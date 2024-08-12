@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             start = new Button();
             stop = new Button();
             label1 = new Label();
@@ -74,9 +75,10 @@
             // inputDuration
             // 
             inputDuration.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            inputDuration.Location = new Point(692, 381);
+            inputDuration.Location = new Point(679, 366);
+            inputDuration.Multiline = true;
             inputDuration.Name = "inputDuration";
-            inputDuration.Size = new Size(278, 35);
+            inputDuration.Size = new Size(277, 56);
             inputDuration.TabIndex = 5;
             inputDuration.TextChanged += inputDuration_TextChanged;
             // 
@@ -90,9 +92,14 @@
             Controls.Add(label1);
             Controls.Add(stop);
             Controls.Add(start);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "AutoReload";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
