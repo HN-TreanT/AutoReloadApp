@@ -17,7 +17,6 @@ namespace AutoReloadApp
         int remainingSeconds;
 
         private bool isProcessing = false;
-        private bool isFirstRun = true;
 
         [DllImport("user32.dll")]
         static extern IntPtr SetForegroundWindow(IntPtr hWnd);
